@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	padding-top: 30px;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	background: lightgrey;
+}
+
+.btn {
+	padding: 13px;
+	background: lightblue;
+	color:#000;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.btn-succes {
+	margin-top: 20px;
+}
+
+#gameResult {
+	color: red;
+}
+
+.game-wrapper {
+	text-align: center;
+}
+
+.game-options {
+	padding:40px 0 40px 0;
+}
+
+.game-output .result {
+	display: inline-block;
+	font-size: 15px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.game-output .result + .result {
+	margin-left: 15px;
+}
+
+.game-table {
+	min-width: 800px;
+	margin: 0 auto;
+	border: 1px solid blue;
+}
+
+thead tr th,
+tbody tr td{
+	padding: 10px;
+	width: 50%;
+	border: 1px solid white;
+}
+
+thead tr:first-child th {
+	border: none;
+}

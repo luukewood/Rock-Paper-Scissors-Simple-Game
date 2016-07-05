@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JS Simple Game</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="game-wrapper">
+				<div class="game-init">
+					<h2>Try to win!</h2>
+					<button class="btn btn-succes">Start New Game</button>
+				</div>
+				<div class="game-options">
+					<button class="btn button-rock">Rock</button>
+					<button class="btn button-paper">Paper</button>
+					<button class="btn button-scissors">Scissor</button>
+				</div>
+				<div class="game-output">
+					<h3>Current Round:</h3><br>
+					<div class="result"><span>Computer picked:</span><span id="computerPick"></span></div>
+					<div class="result"><span>Player picked:</span><span id="playerPick"></span></div>
+					<div class="result"><span>Result:</span><span id="gameResult"></span></div>
+				</div>
+				<div class="game-result">
+					<table class="game-table">
+						<thead>
+							<tr>
+								<th colspan="2" class="text-center">Game results</th>
+							</tr>
+							<tr>
+								<th id="playerName">Player</th>
+      							<th>Computer</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td id="playerScore">0</td>
+    							<td id="computerScore">0</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script> -->
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
