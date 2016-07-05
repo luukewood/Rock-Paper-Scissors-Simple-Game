@@ -36,6 +36,11 @@
 	padding:40px 0 40px 0;
 }
 
+.game-options button {
+	opacity: 0;
+	transition: all 1s;
+}
+
 .game-output .result {
 	display: inline-block;
 	font-size: 15px;
