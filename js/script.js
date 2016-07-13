@@ -17,7 +17,6 @@
 		var round = 0;
 
 		function newGame() {
-			console.log('aaa');
 			handleButton();
 			round += 1;
 			textRound.textContent = "Current Round" + " :" + round;
