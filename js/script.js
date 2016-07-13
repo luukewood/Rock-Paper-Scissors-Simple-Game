@@ -1,7 +1,5 @@
 (function(){
 
-	function handleButtons() {
-
 		var initButton = document.querySelector(".btn-succes");
 		var optionsField = document.querySelector(".game-options");
 		var buttonsOption = optionsField.querySelectorAll("button");
@@ -19,7 +17,8 @@
 		var round = 0;
 
 		function newGame() {
-			
+			console.log('aaa');
+			handleButton();
 			round += 1;
 			textRound.textContent = "Current Round" + " :" + round;
 			computer.score = 0;
@@ -37,7 +36,6 @@
 
 		function playerPick(pick) {
 			player.pick = pick;
-			console.log(player);
 			computerPick();
 			compareResults();
 		};
@@ -102,22 +100,22 @@
 
 		initButton.addEventListener('click', newGame, false);
 
-		for(var i = 0; i < buttonsOption.length; i++ ) {
-			buttonsOption[i].addEventListener('click', function(e){
-				target = e.currentTarget;
-				if ( target.classList.contains("button-rock")) {
-					var currentPick = 'rock';
-					playerPick(currentPick);
-				} else if(target.classList.contains("button-paper")) {
-					var currentPick = 'paper';
-					playerPick(currentPick);
-				} else {
-					var currentPick = 'scissor';
-					playerPick(currentPick);
-				};
-
-			}, false);
+		function handleButton() {
+			for(var i = 0; i < buttonsOption.length; i++ ) {
+				buttonsOption[i].addEventListener('click', function(e){
+					target = e.currentTarget;
+					var currentPick;
+					if ( target.classList.contains("button-rock")) {
+						currentPick = 'rock';
+						playerPick(currentPick);
+					} else if(target.classList.contains("button-paper")) {
+						currentPick = 'paper';
+						playerPick(currentPick);
+					} else {
+						currentPick = 'scissor';
+						playerPick(currentPick);
+					};
+				}, false);
+			};
 		};
-	};
-	window.onload = handleButtons;
 })();
